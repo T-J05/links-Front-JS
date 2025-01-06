@@ -4,7 +4,7 @@ import { ContainerCards } from "./ContainerCards.js";
 
 export const FilteredLinks = (etiqueta) => {
   const section = document.getElementById("section"); // Reutilizar el contenedor principal
-
+    console.log({etiquetaputa:etiqueta})
   if (!section) {
     console.error("El contenedor principal con ID 'section' no existe.");
     return;
@@ -17,7 +17,7 @@ export const FilteredLinks = (etiqueta) => {
     url: `${api.getLinksByTag}${etiqueta}`,
     callback: (data) => {
       const enlaces = data.enlaces;
-
+      
       if (!enlaces || enlaces.length === 0) {
         // Mostrar mensaje cuando no hay enlaces
         const mensaje = document.createElement("p");
