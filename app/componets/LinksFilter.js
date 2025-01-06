@@ -26,6 +26,11 @@ export const FilteredLinks = (etiqueta) => {
         section.appendChild(mensaje);
       } else {
         // Si hay enlaces, renderizarlos con ContainerCards
+        const tituloEnlace =document.createElement("h3")
+        console.log({todo:enlaces})
+        console.log({e:enlaces[0].etiquetas})
+        tituloEnlace.textContent = `${enlaces[0].etiquetas}`
+        section.appendChild(tituloEnlace)
         section.appendChild(ContainerCards({ enlaces }));
       }
     },

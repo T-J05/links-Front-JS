@@ -8,3 +8,7 @@ html {
 #formContainer {
     display: none;
 }
+
+.tagTitle{
+    font-size: 1.5rem;
+}
