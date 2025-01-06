@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Enlaces</title>
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+        <li title="Pagina de inicio"><a href="index.html">INICIO</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <h1 class="titulo-principal">AlLinks</h1>
+
+        <h2 class="clas">CATEGORÍAS</h2>
+        <section id="categorias" class="section-categoria">
+            <!-- dinámicamente cargar categorías para filtrar -->
+        </section>
+
+        <button id="addLinkButton" aria-expanded="false" aria-controls="formContainer">
+            Añadir enlace</button>
+        <section class="newLinksection" id="formContainer">
+                <form class="formLink" id="form-id">
+                    <label for="url">URL</label>
+                    <input type="url" id="url" name="url" 
+                    placeholder="Ej: https://www.google.com" required><br>
+            
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" name="titulo" 
+                    placeholder="Ej: Enlace a google" required maxlength="30"><br>
+            
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" required maxlength="150" 
+                    placeholder="Ej: Página principal de búsqueda de Google"></textarea><br>
+            
+                    <select id="tagSelect" name="tagSelect" required>
+                        <option value="" disabled selected>Selecciona un tag</option>
+                        <!-- Aquí se cargarían dinámicamente los tags disponibles -->
+                    </select><br>
+            
+                    <button type="submit">Guardar enlace</button>
+                </form>
+            </section>
+
+        <article class="details-link" id="details-link">
+            <!-- seccion donde muestra los detalles del link
+            etiqueta
+            comentario
+            votos
+            voton de votar
+            seccion de comentarios 
+            opcion para comentar -->
+        </article>
+        
+        <section class="links-container" id="all-links">
+            <!-- sección principal en donde están los enlaces primeramente -->
+        </section>
+
+
+        <section class="filter-links" id="filter">
+            <!-- sección luego de filtrar el tema dinámicamente -->
+        </section>
+
+
+    </main>
+
+    <!-- <footer>todos los derechos reservados</footer>  -->
+
+    <script> 
+    // Enlace al archivo de JS
+    </script>
+
+</body>
+</html>
