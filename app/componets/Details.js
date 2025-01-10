@@ -15,7 +15,7 @@ export const Details = (link) => {
   let etiquetasHtml = link.enlace.etiquetas.length > 0
     ? link.enlace.etiquetas.map(etiquetaObj => etiquetaObj.nombre).join(", ")
     : "Sin etiquetas";
-
+  console.log({et : etiquetasHtml})
   // Generar contenido HTML
   sectionDetails.innerHTML = `
     <h2>${link.enlace.titulo}</h2>

@@ -2,8 +2,9 @@ import { handleCardClick } from "./HandleDetails.js";
 
 export const Card = (props) => {
     let { url, titulo, id, votos, etiquetas } = props;
-    console.log({ xd:etiquetas });
     
+    console.log({ñ:etiquetas})
+    console.log({ñ:etiquetas[0].nombre})
     // Asegúrate de que 'etiquetas' sea siempre un array
     etiquetas = Array.isArray(etiquetas) ? etiquetas : [];
 
@@ -14,14 +15,14 @@ export const Card = (props) => {
     article.style.width = '18rem';
 
     // Genera el HTML para las etiquetas o muestra "sin etiquetas" si no hay
-    let etiquetasHtml = etiquetas.length > 0
-        ? etiquetas.map(etiquetaObj => etiquetaObj.nombre).join(", ")
-        : "sin etiquetas";
+    const etiquetaMostrar = etiquetas.length > 0 && etiquetas[0].etiqueta && etiquetas[0].etiqueta.nombre
+    ? etiquetas[0].etiqueta.nombre
+    : etiquetas[0]?.nombre || "sin etiqueta";
 
     // Contenido de la tarjeta
     article.innerHTML = `
         <div class="card-body">
-            <h4 class="tagTitle">Etiqueta: ${etiquetasHtml}</h4>
+            <h4 class="tagTitle">Etiqueta: ${etiquetaMostrar}</h4>
             <h5 class="card-title">${titulo}</h5>
             <p class="card-text">Votos: ${votos}</p>
             <p class="card-text"><a href="${url}">URL</a></p>

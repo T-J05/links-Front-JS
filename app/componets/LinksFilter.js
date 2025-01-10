@@ -29,9 +29,9 @@ export const FilteredLinks = (etiqueta) => {
         const tituloEnlace =document.createElement("h3")
         console.log({todo:enlaces})
         console.log({e:enlaces[0].etiquetas})
-        tituloEnlace.textContent = `${enlaces[0].etiquetas}`
+        tituloEnlace.textContent = `${enlaces[0].etiquetas[0].nombre}`
         section.appendChild(tituloEnlace)
-        section.appendChild(ContainerCards({ enlaces }));
+        section.appendChild(ContainerCards({ enlaces:enlaces }));
       }
     },
   });
